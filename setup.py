@@ -1,3 +1,7 @@
+"""
+Augeas syntax highlighting for Pygments.
+"""
+
 from setuptools import setup
  
 __author__ = 'tim@sharpe.id.au'
@@ -9,6 +13,9 @@ setup(
     author=__author__,
     packages=['augeas_lexer'],
     entry_points='''[pygments.lexers]
-augeaslexer = augeas_lexer:AugeasLexer
+augeas = augeas_lexer:AugeasLexer
+augtool-shell = augeas_lexer:AugtoolShellLexer
+augtool = augeas_lexer:AugtoolLexer
+puppet-augeas = augeas_lexer:PuppetAugeasLexer
 '''
 )
